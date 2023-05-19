@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css" class="rel">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container py-5">
+    <div class="card">
+        <div class="card card-header bg-light">
+            <h1>Payment form example</h1>
+        </div>
+        <div class="card-body">
+            
+            <form novalidate>
+                <div class="row">
+                    <div class="col-5">
+                        <label for="cardNumber" class="form-label">Card #</label>
+                    <div class="input-group">
+                        <input id="cardNumber" type="number" class="form-control" placeholder="XXXXXXXXXXXXXXXX">
+                        <div class="invalid-feedback">
+                            Credit card number is required.
+                        </div>
+                </div>
+            </div>
+                <div class="col-3">
+                    <label for="cvcNumber" class="form-label">CVC #</label>
+                    <div class="input-group">
+                        <input id="cvcNumber" type="number" class="form-control" placeholder="000">
+                        <div class="invalid-feedback">
+                            CVC Code Required
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <label for="amountSpent" class="form-label">Amount</label>
+                    <div class="input-group">
+                        <div class="input-group-text">$</div>
+                        <input id="amountSpent" type="number" class="form-control" placeholder="Amount">
+                        <div class="invalid-feedback">
+                            Amount required
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <div class="row mt-3">
+                    <div class="col-6">
+                        <label for="firstName" class="form-label">First Name</label>
+                        <div class="input-group">
+                            <input id="firstName" type="text" class="form-control" placeholder="John">
+                            <div class="invalid-feedback">
+                                Valid Name Required
+                            </div>
+                        </div>
+                    </div>
+                
+                <div class="col-6">
+                    <label for="lastName" class="form-label">Last Name</label>
+                    <div class="input-group">
+                        <input id="lastName" type="text" class="form-control" placeholder="Smith">
+                        <div class="invalid-feedback">
+                            Valid Last Name Required
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="row mt-3">
+                <div class="col-6">
+                <label for="city" class="form-label">City</label>
+                <div class="input-group">
+                    <input id="city" type="text" class="form-control" placeholder="">
+                </div>
+            </div>
+            
+            <div class="col-md-3">
+                <label for="state" class="form-label">State</label>
+                
+                    <select name="state" class="form-control" id="stateSelect">
+                        <option value="">Pick a state</option>
+                        <option value="newYork">New York</option>
+                        <option value="miami">Miami</option>
+                        <option value="washington">Washington</option>
+                    </select>
+               
+            </div>
+
+            <div class="col-3">
+                <label for="state" class="form-label">Postal Code</label>
+                <div class="input-group">
+                    <input id="city" type="text" class="form-control" placeholder="">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row mt-3">
+            <label for="paymentMethod">We accept</label>    
+            <div class="col-auto">
+                <div class="form-check">
+                    <input id="ccVisa" name="paymentMethod" type="radio" class="form-check-input" required>
+                    <label for="ccVisa"><i class="fa-brands fa-cc-visa lead"></i></label>
+                </div>
+            </div>
+            <div class="col-1">
+                <div class="form-check">
+                    <input id="ccMasterCard" name="paymentMethod" type="radio" class="form-check-input" required>
+                    <label for="ccMasterCard"><i class="fa-brands fa-cc-mastercard lead"></i></label>
+                </div>
+            </div>
+            <div class="col-1">
+                <div class="form-check">
+                    <input id="ccAmex" name="paymentMethod" type="radio" class="form-check-input" required>
+                    <label for="ccAmex"><i class="fa-brands fa-cc-amex lead"></i></label>
+                </div>
+            </div>
+            <div class="col-1">
+                <div class="form-check">
+                    <input id="ccPP" name="paymentMethod" type="radio" class="form-check-input" required>
+                    <label for="ccPP"><i class="fa-brands fa-cc-paypal lead"></i></label>
+                </div>
+            </div>
+            <div class="col-auto">
+                <div class="container">
+                <div class="form-floating d-flex justify-content-end">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+        </div>
+        </div>
+        </div>
+
+        <div class="card-footer mt-3">
+            <div class="container">
+                <div class="row justify-content-end">
+                    <div class="col-auto">
+                        <button class="btn btn-secondary btn-lg">Cancel</button>
+                    </div>
+                    <div class="col-auto">
+                        <button class="btn btn-primary btn-lg">Send</button> 
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+                </form>
+        </div>
+    </div>
+    
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/f05d368172.js" crossorigin="anonymous"></script>
+</body>
+</html>
