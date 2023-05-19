@@ -16,10 +16,16 @@
             <h1>Payment form example</h1>
         </div>
         <div class="card-body">
-            
+         
+            <!-- alert -->
+            <div class="alert alert-danger" role="alert">
+                Some fields are missing
+              </div>
+
+            <!-- form -->
             <form novalidate>
                 <div class="row">
-                    <div class="col-5">
+                    <div class="col-5 mt-3">
                         <label for="cardNumber" class="form-label">Card #</label>
                     <div class="input-group">
                         <input id="cardNumber" type="number" class="form-control" placeholder="XXXXXXXXXXXXXXXX">
@@ -28,7 +34,7 @@
                         </div>
                 </div>
             </div>
-                <div class="col-3">
+                <div class="col-3 mt-3">
                     <label for="cvcNumber" class="form-label">CVC #</label>
                     <div class="input-group">
                         <input id="cvcNumber" type="number" class="form-control" placeholder="000">
@@ -37,7 +43,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-4 mt-3">
                     <label for="amountSpent" class="form-label">Amount</label>
                     <div class="input-group">
                         <div class="input-group-text">$</div>
@@ -99,42 +105,51 @@
             </div>
 
         </div>
+            
 
-        <div class="row mt-3">
-            <label for="paymentMethod">We accept</label>    
-            <div class="col-auto">
-                <div class="form-check">
-                    <input id="ccVisa" name="paymentMethod" type="radio" class="form-check-input" required>
-                    <label for="ccVisa"><i class="fa-brands fa-cc-visa lead"></i></label>
+            <div class="row mt-3">
+                <label for="paymentMethod">We accept</label>    
+            
+                <!-- Visa -->
+                <div class="col-1">
+                    <div class="form-check">
+                        <input id="ccVisa" name="paymentMethod" type="radio" class="form-check-input" required>
+                        <label for="ccVisa"><i class="fa-brands fa-cc-visa lead"></i></label>
+                    </div>
                 </div>
-            </div>
-            <div class="col-1">
-                <div class="form-check">
-                    <input id="ccMasterCard" name="paymentMethod" type="radio" class="form-check-input" required>
-                    <label for="ccMasterCard"><i class="fa-brands fa-cc-mastercard lead"></i></label>
+
+                <!-- Master -->
+                <div class="col-1">
+                    <div class="form-check">
+                        <input id="ccMasterCard" name="paymentMethod" type="radio" class="form-check-input" required>
+                        <label for="ccMasterCard"><i class="fa-brands fa-cc-mastercard lead"></i></label>
+                    </div>
                 </div>
-            </div>
-            <div class="col-1">
-                <div class="form-check">
-                    <input id="ccAmex" name="paymentMethod" type="radio" class="form-check-input" required>
-                    <label for="ccAmex"><i class="fa-brands fa-cc-amex lead"></i></label>
+
+                <!-- American Express -->
+                <div class="col-1">
+                    <div class="form-check">
+                        <input id="ccAmex" name="paymentMethod" type="radio" class="form-check-input" required>
+                        <label for="ccAmex"><i class="fa-brands fa-cc-amex lead"></i></label>
+                    </div>
                 </div>
-            </div>
-            <div class="col-1">
-                <div class="form-check">
-                    <input id="ccPP" name="paymentMethod" type="radio" class="form-check-input" required>
-                    <label for="ccPP"><i class="fa-brands fa-cc-paypal lead"></i></label>
+
+                <!-- PayPal -->
+                <div class="col-3">
+                    <div class="form-check">
+                        <input id="ccPP" name="paymentMethod" type="radio" class="form-check-input" required>
+                        <label for="ccPP"><i class="fa-brands fa-cc-paypal lead"></i></label>
+                    </div>
                 </div>
-            </div>
-            <div class="col-auto">
-                <div class="container">
-                <div class="form-floating d-flex justify-content-end">
-                <label for="message" class="form-label">Message</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-            </div>
-        </div>
-        </div>
-        </div>
+          
+                <!-- Mensaje -->
+                <div class="col-6">
+                    <div class="form-floating d-flex justify-content-end">
+                        <label for="message" class="form-label"></label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="Message"></textarea>
+                        <small class="text-muted m-1">Add any notes here.</small>
+                    </div>
+                </div>
 
         <div class="card-footer mt-3">
             <div class="container">
@@ -149,11 +164,9 @@
             </div>
         </div>
 
-
-                </form>
+    </form>
         </div>
     </div>
-    
 </div>
 
 
